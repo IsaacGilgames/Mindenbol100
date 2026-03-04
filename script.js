@@ -25,10 +25,10 @@ btns.forEach(function (btn) {
     btn.addEventListener("click", function (e) {
         const styles = e.currentTarget.classList;
         if (styles.contains("decrease")) {
-            count--;
+            count++;
         }
         else {
-            count++;
+            count--;
         }
         value.textContent = count;
         localStorage.setItem("count", count);
