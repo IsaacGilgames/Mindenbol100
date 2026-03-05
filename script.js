@@ -8,7 +8,7 @@ if (count !== null) {
 function datumKiiras() {
     let ma = new Date()
     let futureDate = new Date()
-    futureDate.setDate(ma.getDate() + (90 - count))
+    futureDate.setDate(ma.getDate() + (100 - count))
     const year = futureDate.getFullYear()
     const month = String(futureDate.getMonth() + 1).padStart(2, "0")
     const day = String(futureDate.getDate()).padStart(2, "0")
@@ -25,10 +25,10 @@ btns.forEach(function (btn) {
     btn.addEventListener("click", function (e) {
         const styles = e.currentTarget.classList;
         if (styles.contains("decrease")) {
-            count--;
+            count++;
         }
         else {
-            count++;
+            count--;
         }
         value.textContent = count;
         localStorage.setItem("count", count);
